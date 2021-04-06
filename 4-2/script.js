@@ -1,22 +1,39 @@
-// Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до 999, мы должны получить на выходе объект, 
-// в котором в соответствующих свойствах описаны единицы, десятки и сотни. Например, для числа 245 мы должны получить следующий 
-// объект: {‘единицы’: 5, ‘десятки’: 4, ‘сотни’:2}. Если число превышает 999, необходимо выдать соответствующее сообщение 
-// с помощью console.log и вернуть пустой объект.
+// 2.Продолжить работу с интернет-магазином:
+// 2.1. В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими объектами можно заменить их элементы?
+// 2.2. Реализуйте такие объекты.
+// 2.3. Перенести функционал подсчета корзины на объектно-ориентированную базу.
 
-const func = function(x) {
-    
-    const obj = {};
+const cart = {
+    products: [
+        {
+            articleNumber: 456873,
+            productName: 'футболка',
+            quantity: 2,
+            price: 1345
+        },
+        {
+            articleNumber: 284623,
+            productName: 'кроссовки',
+            quantity: 1,
+            price: 6799
+        },
+        {
+            articleNumber: 278342,
+            productName: 'куртка',
+            quantity: 1,
+            price: 15000
+        },
+        {
+            articleNumber: 981423,
+            productName: 'шапка',
+            quantity: 1,
+            price: 1999
+        }
+    ],
 
-    if ((x < 0) || (x > 999)) {
-        console.log('Задано неверное число');
-        return obj;
+    cartPrice() {
+        return this.products.reduce((finalPrice, cartProduct) => finalPrice + cartProduct.quantity * cartProduct.price, 0);
     }
-    
-    obj.firstOrder = +x.toString()[2];   
-    obj.secondOrder = +x.toString()[1];
-    obj.thirdOrder = +x.toString()[0];
-    
-    return obj;
 }
 
-console.log(func(355));
+console.log(cart.cartPrice(cart)); 
