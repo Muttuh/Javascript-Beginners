@@ -1,0 +1,61 @@
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+tr {
+    width: 20px;
+    height: 20px;
+}
+td {
+    border: 1px dotted darkgrey;
+    background-color: #eee;
+    width: 20px;
+    height: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    background: #2e353d;
+}
+.menuButton{
+    width: 150px;
+    padding: 15px;
+    margin: 10px;
+    color: white;
+    background: #007b32;
+    text-align: center;
+    cursor: pointer;
+}
+.menuButton:hover{
+    background: #009641;
+}
+#game{
+    border-collapse: collapse;
+    margin: 2% auto 0;
+}
+#menu{
+    display: flex;
+    justify-content: center;
+}
+
+.food{
+    background: goldenrod;
+}
+.snakeBody{
+    background: palevioletred;
+}
+.snakeHead{
+    background: #9b0013;
+}
+.disabled {
+    background: #7c7c7c;
+}
+.disabled:hover{
+    background: #7c7c7c;
+}
+#score {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
